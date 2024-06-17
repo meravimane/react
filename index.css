@@ -41,3 +41,19 @@ border: 1px solid black;
 .res-img {
     width: 100%;
 }
+
+.filter-btn {
+    padding: 3px;
+}
+.search{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;   
+}
+.search-btn {
+    margin-left: 10px;
+}
+
+.loginBtn {
+    margin-left: 5px;
+}
