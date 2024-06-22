@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Restaurant } from "./Restaurant"
-
+import { Link } from "react-router-dom";
 export const Body = () => {
     const [restaurants, setRestaurants]=useState([]);
     const [listOfRestaurants, setListOfRestaurants]=useState([]);
@@ -40,7 +40,7 @@ export const Body = () => {
         </div>
         <div className="res-list">
             {restaurants.map(restaurant => (
-                <Restaurant key={restaurant.info.id} resData={restaurant.info}/>
+                <Link to={/restaurants/+ restaurant.info.id}><Restaurant key={restaurant.info.id} resData={restaurant.info}/></Link>
             ))}
         </div>
     </div> : <div>Loading...</div>
