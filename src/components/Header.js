@@ -13,6 +13,7 @@ export const Header = () => {
                 <li> <Link to="/">Home </Link> </li>
                 <li> <Link to="/about">About </Link> </li>
                 <li> <Link to="/contact">Contact </Link> </li>
+                <li> <Link to="/cards">Cards </Link> </li>
                 <button className="loginBtn" onClick={() => loginText == 'LogIn'?  setLoginText('LogOut'): setLoginText('LogIn')}>{loginText}</button>
             </ul>
         </div>
