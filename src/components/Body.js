@@ -32,13 +32,13 @@ export const Body = () => {
     }
 
     return listOfRestaurants.length? <div className="body">
-        <div className="search">
+        <div className="search flex p-3 justify-between">
             <div>
-                <input value={searchText} onChange={(e)=> searchRestaurants(e.target.value)}/>
+                <input className="border-2 rounded-lg p-2" value={searchText} onChange={(e)=> searchRestaurants(e.target.value)} placeholder="Search restaurant"/>
             </div>
-            <button className="filter-btn" onClick={()=> sortTopRatedRestaurants()}>Top Rated Restaurant </button>
+            <button className="filter-btn border-2 rounded-lg p-2" onClick={()=> sortTopRatedRestaurants()}>Top Rated Restaurant </button>
         </div>
-        <div className="res-list">
+        <div className="res-list flex flex-wrap m-2 justify-center border-2 shadow-sm">
             {restaurants.map(restaurant => (
                 <Link to={/restaurants/+ restaurant.info.id}><Restaurant key={restaurant.info.id} resData={restaurant.info}/></Link>
             ))}
